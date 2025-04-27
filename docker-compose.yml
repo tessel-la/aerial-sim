@@ -1,0 +1,17 @@
+services:
+  aerostack2:
+    image: aerostack2_sim
+    container_name: robo_boy_sim
+    network_mode: host
+    ipc: host
+    tty: true
+    stdin_open: true
+    environment:
+      - DISPLAY=$DISPLAY
+      - XAUTHORITY=/root/.Xauthority # Change from /tmp/.Xauthority to /root/.Xauthority
+    volumes:
+      - ~/.Xauthority:/root/.Xauthority
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./simulation:/root/simulator/simulation
+      - /etc/sysctl.d:/etc/sysctl.d
+      - /dev/shm:/dev/shm
