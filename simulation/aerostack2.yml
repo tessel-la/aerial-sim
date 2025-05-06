@@ -27,6 +27,10 @@ windows:
         - ros2 launch as2_behaviors_motion motion_behaviors_launch.py
             namespace:=drone0
             config_file:=config.yaml
+  - joy_control:
+      layout:
+      panes:
+        -  bash /root/simulator/simulation/run_joy_api_control.sh
   - mission:
       layout:
       panes:

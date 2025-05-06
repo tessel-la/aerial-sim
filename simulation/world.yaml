@@ -1,4 +1,4 @@
-world_name: "grass"
+world_name: "empty"
 drones:
   - model_type: "quadrotor_base"
     model_name: "drone0"
@@ -55,60 +55,60 @@ objects:
     rpy: [ 0, 0, -1.57 ]
     joints: ["motor_link_joint", "blades_link_joint"]
     object_bridges: ["pose"]
-  - model_type : "windmill"
-    model_name: "windmill_1"
-    xyz: [ 5.0, 18.0, 0.3 ]
-    rpy: [ 0, 0, 0 ]
-    joints: ["motor_link_joint", "blades_link_joint"]
-    object_bridges: ["pose"]#
-  - model_type : "windmill"
-    model_name: "windmill_2"
-    xyz: [ 5.0, -18.0, 0.3 ]
-    rpy: [ 0, 0, 0 ]
-    joints: ["motor_link_joint", "blades_link_joint"]
-    object_bridges: ["pose"]
-  - model_type : "windmill"
-    model_name: "windmill_3"
-    xyz: [ 20.0, -18.0, 0.3 ]
-    rpy: [ 0, 0, 0 ]
-    joints: ["motor_link_joint", "blades_link_joint"]
-    object_bridges: ["pose"]
-  - model_type : "windmill"
-    model_name: "windmill_4"
-    xyz: [ 20.0, 18.0, 0.3 ]
-    rpy: [ 0, 0, 0 ]
-    joints: ["motor_link_joint", "blades_link_joint"]
-    object_bridges: ["pose"]
-  - model_type : "windmill"
-    model_name: "windmill_5"
-    xyz: [ 35.0, 18.0, 0.3 ]
-    rpy: [ 0, 0, 0 ]
-    joints: ["motor_link_joint", "blades_link_joint"]
-    object_bridges: ["pose"]
-  - model_type : "windmill"
-    model_name: "windmill_6"
-    xyz: [ 35.0, -18.0, 0.3 ]
-    rpy: [ 0, 0, 0 ]
-    joints: ["motor_link_joint", "blades_link_joint"]
-    object_bridges: ["pose"]
-  - model_type : "windmill"
-    model_name: "windmill_7"
-    xyz: [ 8.0, 36.0, 0.3 ]
-    rpy: [ 0, 0, 0 ]
-    joints: ["motor_link_joint", "blades_link_joint"]
-    object_bridges: ["pose"]
-  - model_type : "windmill"
-    model_name: "windmill_8"
-    xyz: [ 23.0, 0.0, 0.3 ]
-    rpy: [ 0, 0, 0 ]
-    joints: ["motor_link_joint", "blades_link_joint"]
-    object_bridges: ["pose"]
-  - model_type : "windmill"
-    model_name: "windmill_9"
-    xyz: [ 23.0, 36.0, 0.3 ]
-    rpy: [ 0, 0, 0 ]
-    joints: ["motor_link_joint", "blades_link_joint"]
-    object_bridges: ["pose"]
+  # - model_type : "windmill"
+  #   model_name: "windmill_1"
+  #   xyz: [ 5.0, 18.0, 0.3 ]
+  #   rpy: [ 0, 0, 0 ]
+  #   joints: ["motor_link_joint", "blades_link_joint"]
+  #   object_bridges: ["pose"]#
+  # - model_type : "windmill"
+  #   model_name: "windmill_2"
+  #   xyz: [ 5.0, -18.0, 0.3 ]
+  #   rpy: [ 0, 0, 0 ]
+  #   joints: ["motor_link_joint", "blades_link_joint"]
+  #   object_bridges: ["pose"]
+  # - model_type : "windmill"
+  #   model_name: "windmill_3"
+  #   xyz: [ 20.0, -18.0, 0.3 ]
+  #   rpy: [ 0, 0, 0 ]
+  #   joints: ["motor_link_joint", "blades_link_joint"]
+  #   object_bridges: ["pose"]
+  # - model_type : "windmill"
+  #   model_name: "windmill_4"
+  #   xyz: [ 20.0, 18.0, 0.3 ]
+  #   rpy: [ 0, 0, 0 ]
+  #   joints: ["motor_link_joint", "blades_link_joint"]
+  #   object_bridges: ["pose"]
+  # - model_type : "windmill"
+  #   model_name: "windmill_5"
+  #   xyz: [ 35.0, 18.0, 0.3 ]
+  #   rpy: [ 0, 0, 0 ]
+  #   joints: ["motor_link_joint", "blades_link_joint"]
+  #   object_bridges: ["pose"]
+  # - model_type : "windmill"
+  #   model_name: "windmill_6"
+  #   xyz: [ 35.0, -18.0, 0.3 ]
+  #   rpy: [ 0, 0, 0 ]
+  #   joints: ["motor_link_joint", "blades_link_joint"]
+  #   object_bridges: ["pose"]
+  # - model_type : "windmill"
+  #   model_name: "windmill_7"
+  #   xyz: [ 8.0, 36.0, 0.3 ]
+  #   rpy: [ 0, 0, 0 ]
+  #   joints: ["motor_link_joint", "blades_link_joint"]
+  #   object_bridges: ["pose"]
+  # - model_type : "windmill"
+  #   model_name: "windmill_8"
+  #   xyz: [ 23.0, 0.0, 0.3 ]
+  #   rpy: [ 0, 0, 0 ]
+  #   joints: ["motor_link_joint", "blades_link_joint"]
+  #   object_bridges: ["pose"]
+  # - model_type : "windmill"
+  #   model_name: "windmill_9"
+  #   xyz: [ 23.0, 36.0, 0.3 ]
+  #   rpy: [ 0, 0, 0 ]
+  #   joints: ["motor_link_joint", "blades_link_joint"]
+  #   object_bridges: ["pose"]
 
 
             

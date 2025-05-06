@@ -1,8 +1,0 @@
-lidar_to_image_depth:
-  ros__parameters:    
-    image_sub : "/drone0/sensor_measurements/gimbal/camera/image_raw"
-    lidar_sub : "/drone0/sensor_measurements/lidar/points" #"/octomap_point_cloud_centers" #"/drone0/sensor_measurements/lidar/points" #"/octomap_point_cloud_centers" #"" # #"/octomap_point_cloud_centers"
-    camera_info_sub : "/drone0/sensor_measurements/gimbal/camera/camera_info"
-    resized_pub : "/drone0/sensor_measurements/gimbal/camera/image_resized"
-    pointcloud_pub : "/drone0/sensor_measurements/gimbal/camera/points"
-    camera_info_pub : "/drone0/sensor_measurements/gimbal/camera/camera_info_resized"

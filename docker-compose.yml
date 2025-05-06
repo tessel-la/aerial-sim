@@ -5,6 +5,7 @@ services:
     network_mode: host
     ipc: host
     tty: true
+    privileged: true
     stdin_open: true
     environment:
       - DISPLAY=$DISPLAY
@@ -13,5 +14,10 @@ services:
       - ~/.Xauthority:/root/.Xauthority
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - ./simulation:/root/simulator/simulation
+      - ./drone_joy_control:/root/aerostack2_ws/src/drone_joy_control
       - /etc/sysctl.d:/etc/sysctl.d
       - /dev/shm:/dev/shm
+    devices:
+      - /dev/input/js0:/dev/input/js0 # For joystick access
+      - /dev/input/event*:/dev/input/event* # Additional input devices
+

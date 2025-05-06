@@ -1,0 +1,18 @@
+/**:
+  ros__parameters:
+    # Controller button mappings
+    btn_takeoff: 0  # A button
+    btn_land: 1     # B button
+    
+    # Joystick axis mappings
+    axis_roll: 0    # Left stick left/right
+    axis_pitch: 1   # Left stick up/down
+    axis_yaw: 2     # Right stick left/right
+    axis_altitude: 3  # Right stick up/down
+    
+    # Control parameters
+    max_linear_speed: 1.0  # m/s
+    max_angular_speed: 0.8  # rad/s
+    max_yaw_speed: 1.0  # rad/s
+    deadzone: 0.1
+    takeoff_height: 1.0  # meters 
