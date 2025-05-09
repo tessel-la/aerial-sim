@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y git python3-pip libxcb-xinerama0 libxcb
 RUN pip3 install --upgrade pip
 RUN apt install udev usbutils -y
 
-COPY ./lidar_to_image_depth /root/aerostack2_ws/src/lidar_to_image_depth
 WORKDIR /root/aerostack2_ws
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash; colcon build --symlink-install --packages-select lidar_to_image_depth"
 
