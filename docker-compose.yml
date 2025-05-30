@@ -1,7 +1,7 @@
 services:
   aerostack2:
     image: aerostack2_sim
-    container_name: robo_boy_sim
+    container_name: aerial_sim_cont
     network_mode: host
     ipc: host
     tty: true
@@ -13,6 +13,8 @@ services:
     volumes:
       - ~/.Xauthority:/root/.Xauthority
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./urdf_serving/cors_mesh_server.py:/root/cors_mesh_server.py
+      - ./urdf_serving/sdf_to_urdf_publisher.py:/root/sdf_to_urdf_publisher.py
       - ./simulation:/root/simulator/simulation
       - ./drone_joy_control:/root/aerostack2_ws/src/drone_joy_control
       - /etc/sysctl.d:/etc/sysctl.d

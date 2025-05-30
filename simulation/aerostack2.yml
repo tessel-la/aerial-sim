@@ -47,4 +47,9 @@ windows:
             namespace_list:=drone0
             rviz_config:=rviz2_config.rviz
             drone_model:=quadrotor_base
+  - cors_server:
+      layout: tiled
+      panes:
+        - python3 /root/cors_mesh_server.py 8000 /root/aerostack2_ws/install/
+        - python3 /root/sdf_to_urdf_publisher.py
 
