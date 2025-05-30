@@ -2,7 +2,7 @@
   "name": "Aerostack2 Development",
   "dockerComposeFile": "../docker-compose.yml",
   "service": "aerostack2",
-  "workspaceFolder": "/root/",
+  "workspaceFolder": "/root",
   "shutdownAction": "none",
   "postCreateCommand": "echo 'Dev container ready!'",
   "customizations": {
