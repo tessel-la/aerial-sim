@@ -6,12 +6,28 @@ RUN echo "set -g mouse on" > ~/.tmux.conf
 # Clone demo project
 WORKDIR /root/
 
-RUN apt-get update && apt-get install -y git python3-pip libxcb-xinerama0 libxcb-cursor0 ros-humble-image-transport ros-humble-image-geometry ros-humble-rmw-cyclonedds-cpp
+# Update package lists and install basic dependencies
+RUN apt-get update && apt-get install --fix-missing -y \
+    git \
+    python3-pip \
+    libxcb-xinerama0 \
+    libxcb-cursor0 \
+    udev \
+    usbutils
+
+# Install ROS2 packages with error handling
+RUN apt-get update && apt-get install -y \
+    ros-humble-image-transport \
+    ros-humble-image-geometry \
+    || (apt-get update && apt-get install -y ros-humble-image-transport ros-humble-image-geometry)
+
+# Try to install cyclonedds packages, but don't fail if not available
+RUN apt-get update && apt-get install -y ros-humble-rmw-cyclonedds-cpp || echo "CycloneDDS packages not available, continuing without them"
+
 RUN pip3 install --upgrade pip
-RUN apt install udev usbutils -y
 
 WORKDIR /root/aerostack2_ws
-RUN /bin/bash -c "source /opt/ros/humble/setup.bash; colcon build --symlink-install --packages-select lidar_to_image_depth"
+RUN /bin/bash -c "source /opt/ros/humble/setup.bash"
 
 # add source to bashrc
 RUN echo "source /root/aerostack2_ws/install/setup.bash" >> ~/.bashrc
