@@ -1,6 +1,9 @@
 services:
   aerostack2:
     image: aerostack2_sim
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
     container_name: aerial_sim_cont
     network_mode: host
     ipc: host
@@ -22,4 +25,3 @@ services:
     devices:
       - /dev/input/js0:/dev/input/js0 # For joystick access
       - /dev/input/event*:/dev/input/event* # Additional input devices
-

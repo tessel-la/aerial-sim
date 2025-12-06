@@ -6,6 +6,10 @@ RUN echo "set -g mouse on" > ~/.tmux.conf
 # Clone demo project
 WORKDIR /root/
 
+# Fix ROS GPG key expiration
+RUN apt-get update || true && apt-get install -y curl gnupg2 && \
+    curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
 # Update package lists and install basic dependencies
 RUN apt-get update && apt-get install --fix-missing -y \
     git \
